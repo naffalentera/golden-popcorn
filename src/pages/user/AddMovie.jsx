@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
-import Sidebar from '../../components/Sidebar';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import InputField from '../../components/InputField';  // Pastikan path sesuai
 
 const MovieInputPage = () => {
@@ -101,15 +102,12 @@ const MovieInputPage = () => {
   };
 
   return (
+    <>
+    <Header/>
     <Container fluid className="mt-3">
       <Row>
-        {/* Sidebar */}
-        <Col md={2}>
-          <Sidebar />
-        </Col>
-
         {/* Main Content */}
-        <Col md={10}>
+        <Col md={12}>
           <Form onSubmit={handleSubmit}>
             <Row>
               <Col>
@@ -244,8 +242,8 @@ const MovieInputPage = () => {
                         <Form.Check
                           type="checkbox"
                           label={genre.name}
-                          checked={genres.includes(genre.genre_id)}
-                          onChange={() => handleGenreChange(genre.genre_id)}
+                          checked={genres.includes(genre.id_genre)}
+                          onChange={() => handleGenreChange(genre.id_genre)}
                         />
                       </Col>
                     ))}
@@ -323,6 +321,8 @@ const MovieInputPage = () => {
         </Col>
       </Row>
     </Container>
+    <Footer/>
+    </>
   );
 };
 

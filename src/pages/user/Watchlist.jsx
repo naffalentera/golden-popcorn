@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 import Filter from '../../components/Filter';
 import MovieGrid from '../../components/MovieGrid';
 
-const SearchPage = () => {
+const WatchlistPage = () => {
   const [movies, setMovies] = useState([]);
   const [sortedMovies, setSortedMovies] = useState([]); // State for movies after sorting
   const [filteredMovies, setFilteredMovies] = useState({ year: 'all', genre: 'all', country: 'all', award: 'all' }); // State for filtering criteria
@@ -106,4 +106,4 @@ const SearchPage = () => {
   );
 };
 
-export default SearchPage;
+export default WatchlistPage;

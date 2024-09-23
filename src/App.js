@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginPage from './pages/user/Login';
 import RegisterPage from './pages/user/Register';
 import SearchPage from './pages/user/Search';
+import WatchlistPage from './pages/user/Watchlist';
+import AddMoviePage from './pages/user/AddMovie';
+
 import PasswordResetPage from './pages/user/ResetPassword';
 import NewPasswordPage from './pages/user/NewPassword';
 import EmailConfirmationPage from './pages/user/EmailConfirmation';
@@ -20,12 +23,16 @@ function App() {
       <Routes>
         {/* Landing page */}
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/email-confirmation" element={<EmailConfirmationPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/watchlist" element={<WatchlistPage />} />
+        <Route path="/add-movie" element={<AddMoviePage />} />
+
+
+        <Route path="/email-confirmation" element={<EmailConfirmationPage />} />
         <Route path="/password-reset" element={<PasswordResetPage />} />
         <Route path="/new-password" element={<NewPasswordPage />} />
         
-        <Route path="/search" element={<SearchPage />} />
 
         {/* CMS - Admin */}
         <Route path="/movie-input" element={<MovieInputPage />} />
